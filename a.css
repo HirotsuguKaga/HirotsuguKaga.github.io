@@ -1,0 +1,209 @@
+body,div,h1,h2,h3,h4,h5,h6,
+pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td {
+  color: #111;
+  font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Helvetica, Arial, sans-serif;
+  line-height: 160%;
+  margin: 0;
+  padding: 0;
+}
+a{
+  color: inherit;
+  font-weight: bold;
+  display: block;
+  padding:2px;
+  text-decoration: none;
+  }
+a:link {
+  color: #039;
+  }
+a:visited {
+  color: #039;
+  }
+h1 {
+  color:#123;
+  font-family:'Bookman Old Style',"Arial Black", sans-serif;
+  font-size: 400%;
+  font-weight: bold;
+  line-height: 90%;
+  text-align: center;
+  
+      -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 3s;
+  }
+h2 {
+  font-family:'Lato', Calibri, ;
+  color: #234;
+  font-size: 150%;
+  margin: 15px 0 5px;
+  padding-top: 20px;
+  padding-left: 5px;
+  }
+h3{
+  margin-top: 25px;
+  }
+hr{
+  margin: 20px 0;
+  }
+img{
+  margin:5px;
+  }
+
+
+body {
+  margin: 0 auto;
+  max-width:700px;
+  }
+header{
+  }
+article{
+  float:left;
+  margin-left: 115px;
+  padding: 20px;
+  position: relative;
+  border-left:30px solid #088;
+  }
+nav {
+  float:left;
+  font-size:120%;
+  padding:0;
+  position:fixed;
+  width:115px;
+  z-index: 2;
+  }
+
+section{
+  margin: 300% 0 auto;
+  padding: 0 20px
+  }
+
+footer{
+  text-align: left;
+  font-size: 80%;
+  }
+nav input{display:none}
+nav input:checked + label{border-right:10px solid #aef}
+nav a{-webkit-transition: all 500ms ease; transition: all 500ms ease;}
+nav a:hover{background-color:#cff;border-radius:5px;}
+
+.menu ul{margin:0;padding:0;}
+.menu ul li {list-style: none;  margin:0;  padding:0;  font-size:14px;  float: left;  position: relative;
+  width: 160px;/*親メニューの幅*/
+  height: 40px;/*親メニューの高さ*/
+  line-height: 40px;
+  background:#4169E1;/*親メニューの背景色*/
+  color: #eee;/*親メニューの文字色*/
+  text-align:center;  font-weight:bold;}
+.menu ul li a {color: #eee;  display: block;  text-decoration: none;}
+.menu ul li:hover, .menu ul li a:hover {background:#EA2839;/*ホバー時の親メニューの背景色*/
+  color:#fff;/*ホバー時の親メニューの文字色*/}
+.menu ul li ul {position: absolute;
+  top: 40px;/*親メニューの高さと同じにする*/
+  width: 160px;  z-index: 100;}
+.menu ul li ul li {visibility: hidden;  overflow: hidden; text-align: left;padding-left: 10px;
+  width: 260px;/*サブメニューの幅*/
+  height: 0;  background:#58b;/*サブメニューの背景色*/}
+.menu ul li ul li:hover, .menu ul li ul li a:hover {background:#FFAFA9;/*ホバー時のサブメニューの背景色*/}
+.menu ul li:hover ul li, .menu ul li a:hover ul li{visibility: visible;
+  overflow: visible;
+  height:40px;/*サブメニューの高さ*/
+  z-index: 10;}
+.menu * {-webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+      -o-transition: 0.5s;
+        transition: 0.5s;}
+
+#totop {
+  background-color: rgba(51,51,51,.4);
+  border-radius: 8px 5px 0 0;
+  -webkit-border-radius-topleft: 5px;    /* Safari,Google Chrome用 */
+  -moz-border-radius-topleft: 5px;   /* Firefox用 */
+  color: white;
+  height: 25px;
+  padding: 0px;
+  position: fixed;  
+  right: 0;  
+  bottom: 0;  
+  text-decoration: none;
+  transition: width .3s linear 0s;
+  width: 0px;
+  }
+#totop span{
+  display: inline-block;
+  font:bold 120%/100% impact;
+  transform: rotate( 90deg );
+  -moz-transform:    rotate( 90deg );  /* Firefox */
+  -webkit-transform: rotate( 90deg );  /* Chrome,Safari */
+  -o-transform:      rotate( 90deg );  /* Opera */
+  -ms-transform:     rotate( 90deg );  /* IE */
+  }
+
+
+.accordion input {
+	display: none;
+}
+.accordion label {
+	color:#008;
+	font-weight:bold;
+	font-size:120%;
+	position: relative;
+	text-align:left;
+	display: block;
+	padding: 10px;
+	border-bottom: 1px solid #ddd;
+	cursor: pointer;
+}
+.accordion label::after {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	display: block;
+	content: '';
+	width: 8px;
+	height: 8px;
+	margin-top: -7px;
+	border-top: 1px solid #888;
+	border-right: 1px solid #888;
+	-webkit-transform: rotate(135deg);
+	transform: rotate(135deg);
+}
+.accordion div {
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	box-shadow: 0 1px 7px 0 rgba(0,0,0,0.1) inset;
+	transition: height .2s ease-in-out;
+	padding-left:20px;
+}
+.accordion input:checked + label {
+	background-color:#eef;
+	}
+.accordion input:checked + label::after {
+	margin-top: -3px;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+.accordion input:checked ~ div {
+	height: 300px;
+	border-bottom: 1px solid #bbf;
+}
+
+
+
+@-webkit-keyframes fadeIn {
+    0% {
+        filter: alpha(opacity=0);
+        -moz-opacity:0;
+        opacity:0;
+    }
+    100% {
+        filter: alpha(opacity=100);
+        -moz-opacity:1;
+        opacity:1;
+    }
+}
+
+
+h1 span{   -webkit-transition: all 6s ease; transition: all 6s ease;}
+.CC:hover {color:red;}		.AA:hover {color:darkgreen;}
+.WW:hover {font-size:150%}	.KK:hover {color:orange;}
